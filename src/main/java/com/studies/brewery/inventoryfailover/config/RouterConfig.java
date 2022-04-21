@@ -1,5 +1,6 @@
-package com.studies.brewery.inventoryfailover.web;
+package com.studies.brewery.inventoryfailover.config;
 
+import com.studies.brewery.inventoryfailover.web.InventoryHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

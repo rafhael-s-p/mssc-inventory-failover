@@ -3,12 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.sfg-beer-works</groupId>
-        <artifactId>sfg-beer-works-bom</artifactId>
-        <version>1.0.21</version>
+        <groupId>io.github.RafhaelSouza</groupId>
+        <artifactId>mssc-brewery-bom</artifactId>
+        <version>1.0.1</version>
     </parent>
-
-    <groupId>com.studies.brewery</groupId>
 
     <artifactId>mssc-inventory-failover</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -28,8 +26,17 @@
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
@@ -37,8 +44,15 @@
             <version>6.3</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.projectreactor</groupId>
@@ -46,5 +60,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <scm>
+        <connection>scm:git:git@github.com:RafhaelSouza/mssc-inventory-failover.git</connection>
+        <developerConnection>scm:git:git@github.com:RafhaelSouza/mssc-inventory-failover.git</developerConnection>
+        <url>https://github.com/RafhaelSouza/mssc-inventory-failover</url>
+        <tag>HEAD</tag>
+    </scm>
 
 </project>
